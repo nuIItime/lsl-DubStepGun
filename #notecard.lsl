@@ -217,6 +217,7 @@ default
       else if(text == "<<<") dialog_songmenu(cur_page-1);
       else if(llToLower(llGetSubString(text,0,5)) == "play #")
       {
+        llMessageLinked(LINK_THIS,0,"erase_data",""); 
         string a = llLinksetDataRead("temp-"+llGetSubString(text,6,-1));  
         if(a == notecardName){ }else
         {
